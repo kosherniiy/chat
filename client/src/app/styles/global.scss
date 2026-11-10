@@ -1,0 +1,52 @@
+:root {
+  --color-bg: #f3f0e8;
+  --color-surface: #fffdf8;
+  --color-ink: #1c1a17;
+  --color-muted: #6b655c;
+  --color-accent: #0f6e56;
+  --color-accent-soft: #d7f0e7;
+  --color-border: #d9d2c5;
+  --color-danger: #b42318;
+  --color-online: #0f6e56;
+  --color-offline: #9a3412;
+  --shadow-soft: 0 12px 40px rgba(28, 26, 23, 0.08);
+  --radius: 14px;
+  --font-sans: 'Segoe UI', 'Candara', 'Gill Sans', sans-serif;
+  --font-mono: 'Cascadia Mono', 'Consolas', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 110, 86, 0.12), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(154, 52, 18, 0.08), transparent 35%),
+    var(--color-bg);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

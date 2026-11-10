@@ -1,0 +1,20 @@
+.form {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+  align-items: end;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--color-border);
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.72), rgba(255, 253, 248, 0.96));
+  backdrop-filter: blur(6px);
+}
+
+.field {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.45rem;
+  align-items: end;
+  min-width: 0;
+}

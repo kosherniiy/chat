@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+  background: #0c5a46;
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+}

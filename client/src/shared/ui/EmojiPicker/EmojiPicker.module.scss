@@ -1,0 +1,133 @@
+.root {
+  position: relative;
+}
+
+.toggle {
+  display: grid;
+  place-items: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1.15rem;
+  line-height: 1;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.toggle:hover:not(:disabled),
+.toggleActive {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.popover {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.55rem);
+  z-index: 20;
+  width: min(100vw - 2rem, 320px);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  animation: popover-in 0.18s ease-out;
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+
+.search {
+  margin: 0.65rem 0.65rem 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-ink);
+  font: inherit;
+}
+
+.search:focus {
+  outline: 2px solid var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.viewport {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  outline: none;
+}
+
+.status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+.list {
+  padding-bottom: 0.5rem;
+  user-select: none;
+}
+
+.category {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.55rem 0.75rem 0.3rem;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  padding: 0 0.35rem;
+}
+
+.emoji {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.emoji:hover,
+.emoji[data-active] {
+  background: var(--color-accent-soft);
+}
+
+@keyframes popover-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popover {
+    animation: none;
+  }
+}

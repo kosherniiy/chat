@@ -1,0 +1,148 @@
+.item {
+  list-style: none;
+  max-width: min(78%, 440px);
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  animation: message-in 0.22s ease-out;
+}
+
+.own {
+  margin-left: auto;
+  background: var(--color-accent-soft);
+  border-color: transparent;
+}
+
+.other {
+  margin-right: auto;
+}
+
+.pending {
+  opacity: 0.72;
+}
+
+.failed {
+  border-color: rgba(180, 35, 24, 0.35);
+}
+
+.deliveryHint {
+  margin: 0.4rem 0 0;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+
+.deliveryError {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+  color: var(--color-danger);
+}
+
+.retry {
+  padding: 0.15rem 0.45rem;
+  border: 1px solid rgba(180, 35, 24, 0.35);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-danger);
+  font: inherit;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.retry:hover {
+  background: rgba(180, 35, 24, 0.08);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.metaRight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.text {
+  margin: 0;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.delete {
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  line-height: 1;
+  opacity: 0.55;
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.item:hover .delete,
+.delete:focus-visible {
+  opacity: 1;
+}
+
+.delete:hover {
+  background: rgba(180, 35, 24, 0.12);
+  color: var(--color-danger);
+}
+
+.system {
+  list-style: none;
+  align-self: center;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  max-width: 90%;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(28, 26, 23, 0.04);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  animation: message-in 0.22s ease-out;
+}
+
+@keyframes message-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .system {
+    animation: none;
+  }
+}

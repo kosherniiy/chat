@@ -1,0 +1,44 @@
+.list {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  scroll-behavior: smooth;
+  background:
+    linear-gradient(180deg, rgba(15, 110, 86, 0.03), transparent 48px),
+    transparent;
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 2rem 1.5rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.emptyIcon {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
+.emptyText {
+  margin: 0;
+  max-width: 16rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
